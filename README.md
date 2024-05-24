@@ -18,10 +18,10 @@ So feel free to collaborate on this 🥳
 ---
 
 ## Repository structure
-I first committed the **unmodified files** from the **old repositories** the modifications were based on. Then I committed the **modified files** from the **working (but outdated) forks**. At least I committed the recent versions of the upstream repository without modifications. This way we can easily compare the differences and create a working version of httpBackend.
+I first committed the **unmodified files** from the **old repositories** the modifications were based on. Then I committed the [**modified files** from the **working (but outdated) forks**](https://github.com/codiflow/excalidraw-fix-httpstorage/pull/3/commits/c4696333639445a6c1205f2f91b7b5bdf4d63f6b). At least I committed [the recent versions of the upstream repository without modifications](https://github.com/codiflow/excalidraw-fix-httpstorage/pull/2/commits/6cfc8bcdc485622918ad211a93238ade90ed930c). This way we can easily compare the differences and create a working version of httpBackend.
 
 ## What I found out so far
-The functionality of reconcileElements has changed. It has been moved to `../../packages/excalidraw` / `../../packages/excalidraw/data/reconcile` now.  
+There were changes within the function `reconcileElements`. It has also been moved to `../../packages/excalidraw` / `../../packages/excalidraw/data/reconcile` now.  
 A new **private** function `_reconcileElements` was introduced with [this commit](https://github.com/excalidraw/excalidraw/commit/32df5502aeaf7899da46ab135016101514a06ecb).  
 Some things have changed in `firestore.ts` making the current implementation of `httpStorage.ts` incompatible.
 
